@@ -1,6 +1,6 @@
 package ThreadCoreKnowledge.DeadLock;
 // 转账的时候遇到了死锁,一旦打开注释，就会发生死锁
-public class TransferMoney implements Runnable{
+public class TransferMoneyAdvanced implements Runnable{
 
     int flag = 1;
 
@@ -8,8 +8,8 @@ public class TransferMoney implements Runnable{
     static Account b =new Account(500);
     static Object lock = new Account(500);
     public static void main(String[] args) throws InterruptedException {
-       TransferMoney r1 = new TransferMoney();
-       TransferMoney r2 = new TransferMoney();
+       TransferMoneyAdvanced r1 = new TransferMoneyAdvanced();
+       TransferMoneyAdvanced r2 = new TransferMoneyAdvanced();
 
        r1.flag=1;
 
